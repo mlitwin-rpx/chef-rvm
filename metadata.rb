@@ -12,6 +12,8 @@ recipe "rvm::user_install", "Installs the RVM codebase for a list of users (sele
 recipe "rvm:user",            "Installs the RVM codebase for a list of users (selected from the node['rvm']['user_installs'] hash) and installs Rubies, global gems, and specific gems driven off attribute metadata. This recipe includes *default* and *user_install*. Use this recipe by itself if you want RVM installed for specific users in isolation with Rubies installed, etc."
 recipe "rvm::vagrant",      "An optional recipe to help if running in a Vagrant virtual machine"
 recipe "rvm::gem_package",  "An experimental recipe that patches the gem_package resource"
+recipe "rvm::rpx_app_rvm",  "RPX RVM configuration"
+#recipe "rvm::rpx_app_rvm_vagrant",  "RPX RVM configuration for vagrant" # not needed in R
 
 %w{ debian ubuntu suse centos amazon redhat fedora mac_os_x }.each do |os|
   supports os
